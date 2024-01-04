@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main(){
+    int arr[]={1,5,6,3,8,2}, num=5, x, y, temp; 
+    int flag=0 ;    
+    int choice ;
+    printf("enter 1 for  deending  and 2 for ascending "); 
+    scanf("%d",&choice);
+
+
+   
+    for(x = 0; x < num - 1; x++){       
+        for(y = 0; y < num - x - 1; y++){          
+            if(arr[y] > arr[y + 1] && choice==1 ){               
+               
+                flag=1;
+                temp = arr[y];
+                arr[y] = arr[y + 1];
+                arr[y + 1] = temp;
+            }
+        }    
+    } 
+    if (flag==1){
+    printf("Array after implementing bubble sort: ");
+    for(x = 0; x<=num; x++){
+        printf("%d  ", arr[x]);
+    }
+    } else {
+         printf("Array after implementing bubble sort: ");
+    for(x=num; x>0; x--){
+        printf("%d ", arr[x]);
+
+
+
+
+
+    }
+    return 0;
+}
+}
